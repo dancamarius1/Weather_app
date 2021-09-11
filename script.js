@@ -114,7 +114,7 @@ function showForecast(forecastWeather){
             if(currentListDate.getDate() == today){
                 let date = today + " / " + month;
                 createForecastCards += 
-                // am folosit atributul current-day sa stochez ziua afisata pe fiecare buton
+                //i used the `current-day` atribute to store the current day value
                 `<div>
             <button class="day-forecast" current-day=${today}> 
             <h2 class="day-date">${date}</h2>
@@ -233,4 +233,3 @@ function setBackground(icon) {
 
 //things remained to do: 
 // display the corect map
-// reset the hour forecast every time a new city is entered
