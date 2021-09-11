@@ -1,0 +1,208 @@
+*{margin: 0; padding: 0; box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+:root {
+    /* colors */
+    /* color palette */
+    --dark-color: #382933;
+    --dark-green: #3B5249;
+    --normal-green: #519872;
+    --light-green: #A4B494;
+    --bright-green: #dcffb8;
+
+    /* font-sizes */
+    --small-font-size: .4rem;
+    --medium-font-size: 1.3rem;
+    --big-font-size: 1.8rem;
+
+    /* margins and paddings */
+    --small-padding: .4rem;
+    --medium-padding: 1rem;
+    --big-padding: 1.5rem;
+
+    /* other tweaks */
+    --border-radius: 15px 0 15px 0;
+    --border-radius-reverse: 0 15px 0 15px;
+}
+
+body {
+    background: url(./images/mountain-landscape.jpg) no-repeat center fixed; 
+} 
+
+.video-inactive {
+    display: none;
+}
+
+.video-active{
+    display: unset;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -2;
+  }
+
+.city-input-container{
+    margin-top: 2rem;
+    font-size: 2rem;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.city-input {
+    font-size: var(--big-font-size);
+    outline: none;
+    border: none;
+    border-bottom: 3px solid var(--normal-green);
+    border-radius: var(--border-radius);
+    padding: var(--medium-padding);
+    color: var(--normal-green);
+    max-width: 80vw;
+    font-weight: bolder;
+}
+.button-container{
+    padding: var(--medium-padding);
+    font-size: var(--big-font-size);
+    
+}
+.button-container a{
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--bright-green);
+    background-color: var(--dark-green);
+    padding: var(--medium-padding);
+    border-bottom: 3px solid var(--bright-green);
+}
+.message-banner{
+    margin: 1rem auto 2rem auto;
+    width: fit-content;
+}
+.error-message{
+    /* visibility: hidden; */
+    color: #fff;
+    padding: var(--small-padding);
+    background-image: linear-gradient(to bottom, rgba(59, 82, 73, 0.9),  rgba(59, 82, 73, 0.7));
+    font-size: var(--medium-font-size);
+    text-align: center;
+    border-radius: var(--border-radius-reverse);
+}
+
+/* hidden items */
+.hidden{
+    visibility: hidden;
+}
+
+.hidden-map {
+    visibility: hidden;
+}
+
+
+
+.current-forecast-container {
+    display:flex;
+    color: var(--light-green);
+    flex-flow: row wrap;
+    max-width: 90%;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+
+.current-city-info-container{
+    background-image: linear-gradient(to bottom, rgba(11, 36, 33, 0.8),  rgba(20, 26, 16, 0.7));
+    padding: var(--medium-padding);
+    min-width: 250px;
+    border-radius: var(--border-radius);
+    color:var(--bright-green);
+}
+
+.city-name{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: .2rem 0;
+}
+.current-date{
+    text-align: center;
+    font-size: var(--medium-font-size);
+}
+.current-temp-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px auto;
+}
+.description-img{
+    width: 100%;
+    height: auto;
+}
+.current-description-container p{
+    text-align: center;
+    font-size: var(--medium-font-size);
+}
+
+.current-temp {
+    font-size: 3rem;
+    width: 40%;
+    text-shadow: 1px 2px 2px #A4B494;
+}
+
+.other-info-container * {
+    margin: 15px auto;
+}
+
+.city-map iframe{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.daily-forecast-container{
+    width: 80%;
+    margin: 0 auto;
+}
+.day-forecast-container {
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding:var(--small-padding);
+    border-bottom: 1px solid var(--bright-green);
+}
+.day-forecast {
+    min-width: 8rem;
+    color: var(--bright-green);
+    cursor: pointer;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(11, 36, 22, 0.9),  rgba(28, 44, 17, 0.7));
+    /* padding: var(--small-padding); */
+    border-radius: var(--border-radius);
+}
+.day-forecast img{
+    width: 80px;
+}
+.day-forecast:focus{
+    background-image: linear-gradient(to bottom, rgba(12, 24, 15, 1),  rgba(34, 43, 28, 0.9));
+    border: 2px solid var(--light-green);
+    box-shadow: 0px 2px 0px var(--light-green);
+}
+.hour-forecast-container{
+    margin: 1rem auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+.hour-forecast{
+    min-width: 8rem;
+    padding: var(--small-padding);
+    border-radius: var(--border-radius);
+    color: var(--bright-green);
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(11, 36, 33, 0.8),  rgba(20, 26, 16, 0.7));
+}

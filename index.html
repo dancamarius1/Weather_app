@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <video class="video-background clear_day video-inactive" autoplay muted loop>
+        <source src="./video/clear_day.mp4" type="video/mp4">
+      </video>
+    <video class="video-background clear_night video-inactive" autoplay muted loop>
+        <source src="./video/clear_night.mp4" type="video/mp4">
+      </video>
+    <video class="video-background clouds_day video-inactive" autoplay muted loop>
+        <source src="./video/clouds_day.mp4" type="video/mp4">
+      </video>
+    <video class="video-background clouds_night video-inactive" autoplay muted loop>
+        <source src="./video/clouds_night.mp4" type="video/mp4">
+      </video>
+    <video class="video-background rain_day video-inactive" autoplay muted loop>
+        <source src="./video/rain_day.mp4" type="video/mp4">
+      </video>
+    <video class="video-background rain_night video-inactive" autoplay muted loop>
+        <source src="./video/rain_night.mp4" type="video/mp4">
+      </video>
+    <video class="video-background thunderstorm_night video-inactive" autoplay muted loop>
+        <source src="./video/thunderstorm_night.mp4" type="video/mp4">
+      </video>
+    <video class="video-background snowfall_day video-inactive" autoplay muted loop>
+        <source src="./video/snowfall_day.mp4" type="video/mp4">
+      </video>
+    <video class="video-background snowfall_night video-inactive" autoplay muted loop>
+        <source src="./video/snowfall_night.mp4" type="video/mp4">
+      </video>
+    <video class="video-background mist video-inactive" autoplay muted loop>
+        <source src="./video/mist.mp4" type="video/mp4">
+      </video>
+    <!-- Upper banner with city input and buttons -->
+    <div class="main-container">
+        <div class="city-input-container">
+            <div class="input-container">
+                <input type="text" class="city-input" placeholder="Search for a city">
+            </div>
+            <div class="button-container">
+                <a href="javascript:;" class="search-btn">Search</a>
+            </div>
+        </div>
+        <!-- Error banner -->
+        <div class="message-banner">
+            <p class="error-message hidden">Not working</p>
+        </div>
+    <!-- Middle section with current data for selected city -->
+        <div class="current-forecast-container">
+            <div class="current-city-info-container hidden">
+                <div>
+                    <h1 class="city-name"></h1>
+                    <p class="current-date"></p>
+                </div>
+                <div class="current-temp-container">
+                    <div class="current-description-container">
+                        <img  class="description-img" >
+                        <p class="current-description"></p>
+                    </div>
+                    <div >
+                        <h2 class="current-temp"></h2>
+                    </div>
+                </div>
+                <div class="other-info-container">
+                    <p class="current-day-temp-range"></p>
+                    <p class="current-day-humidity"></p>
+                    <p class="current-day-pressure"></p>  
+                </div>
+            </div>
+            <div class="city-map hidden-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91159.41938874174!2d26.10562219806585!3d44.43866232284468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf3cad4f%3A0xac0632e37c9ca628!2sBucuresti!5e0!3m2!1sro!2sro!4v1630584473758!5m2!1sro!2sro" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <!-- Lower section with forecast data for 6 days for selected city-->
+        <div class="daily-forecast-container hidden">
+            
+                <div class="day-forecast-container">
+                    
+                   
+                </div>
+                
+            
+            <div class="hour-forecast-container">
+                <!-- <div class="hour-forecast">
+                    <h3>03:00</h3>
+                    <img src="http://openweathermap.org/img/w/01d.png" alt="icon">
+                    <h3>20°C</h3>
+                    <p>Sunny</p>
+                </div> -->
+            </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
